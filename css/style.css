@@ -1,0 +1,456 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: hsl(0, 0%, 20%);
+    background: hsl(240, 30%, 90%);
+    font-family: "Nunito", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "PT Sans", "Nunito", sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: auto;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+li,
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    font-family: "PT Sans", sans-serif;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 30rem)) 1fr;
+    grid-column-gap: 2rem;
+    grid-row-gap: 3rem;
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 10000;
+    background: hsl(0, 0%, 100%);
+    -webkit-box-shadow: 0 2px 6px 0 hsl(0, 0%, 0%, 0.1);
+    box-shadow: 0 2px 6px 0 hsl(0, 0%, 0%, 0.1);
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 4fr repeat(4, minmax(auto, 1fr)) 4fr;
+}
+
+nav ul li {
+    color: hsl(250, 30%, 50%);
+    list-style: none;
+    text-align: center;
+    font-weight: 600;
+    font-variant: small-caps;
+    padding: 1rem;
+    margin-bottom: 0;
+}
+
+nav ul li:first-child {
+    grid-column: 2 / 3;
+}
+
+nav ul li:hover {
+    background-color: hsl(250, 30%, 95%);
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+
+.article-bg-image {
+    background: url("https://www.cp-webseiten.de/CSS-Grid/assets/images/webproduct_darkbg2.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.css-line {
+    /* To make css-line stay in the box */
+    position: relative;
+    /* To make css-line not overflow */
+    overflow: hidden;
+}
+
+.css-line:before {
+    /* Positions it absolute within the box. Needs parent element to be positioned */
+    position: absolute;
+    /* Pushes element 10px to the left out of the box */
+    left: -10px;
+    /* Pushes element 10px to the right out of the box */
+    right: -10px;
+    bottom: 100%;
+    background: hsl(250, 30%, 70%);
+    height: 50px;
+    z-index: 10;
+    content: "";
+    /* Rotates element 2 deg */
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+    /* Fixes element at the top left */
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+}
+
+.content,
+.content-list,
+.gradient-bg,
+.shopping-list-section {
+    grid-column: 2 / 4;
+}
+
+.annotation {
+    grid-row: 4 / span 2;
+    grid-column: 4 / 5;
+    color: hsl(250, 30%, 50%);
+}
+
+.annotation p {
+    font-size: 0.8rem;
+}
+
+.sidebar {
+    width: 40%;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    justify-self: end;
+    /* Make the element stick at top */
+    position: -webkit-sticky;
+    position: sticky;
+    /* Make it stick at top: 3rem */
+    top: 7rem;
+}
+
+.content,
+.sidebar,
+header {
+    /* -webkit-box-shadow: 0 2px 6px 0 hsl(0, 0%, 0%, 0.1);
+    box-shadow: 0 2px 6px 0 hsl(0, 0%, 0%, 0.1); */
+}
+
+.content,
+.gradient-bg,
+.shopping-list-section,
+.sidebar,
+footer,
+header {
+    background: hsl(0, 0%, 100%);
+}
+/*
+Initial-letter works only in Safari.
+
+User a feature query to only apply it if the browser supports it.
+ */
+@supports (initial-letter: 3) or (-webkit-initial-letter: 3) {
+    .content p::first-letter {
+        color: hsl(250, 30%, 50%);
+        font-weight: 600;
+        margin-right: 0.5rem;
+        -webkit-initial-letter: 3;
+        initial-letter: 3;
+    }
+}
+
+header {
+    /* Stretch from first grid line to the last grid line. */
+    display: grid;
+    grid-column: 1 / -1;
+    height: 100vh;
+    background: url("https://www.cp-webseiten.de/CSS-Grid/assets/images/webproduct_darkbg2.jpg") no-repeat center;
+    background-size: cover;
+}
+
+footer {
+    /* Stretch from first grid line to the last grid line. */
+    grid-column: 1 / -1;
+    display: grid;
+}
+
+footer h2 {
+    margin: auto;
+}
+
+.header__title {
+    color: hsl(0,0%,100%);
+}
+
+.article__item {
+    padding: 2rem;
+}
+
+.grid-item__wrapper {
+    padding: 2rem;
+}
+
+.list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.list__item {
+    width: 25%;
+    background: hsl(0, 0%, 100%);
+    padding: 2rem;
+    list-style: none;
+    position: relative;
+    /* -webkit-box-shadow: 0 2px 6px 0 hsl(0, 0%, 0%, 0.1);
+    box-shadow: 0 2px 6px 0 hsl(0, 0%, 0%, 0.1); */
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.list__image img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: calc(100% + 4rem);
+    margin-left: -2rem;
+    margin-top: -2rem;
+    height: 100%;
+}
+
+.list__image {
+    height: 150px;
+}
+
+.list__title {
+    margin-bottom: 1.5rem;
+}
+
+.list__number {
+    position: absolute;
+    background: hsl(0, 0%, 10%);
+    color: hsl(0, 0%, 100%);
+    top: 0;
+    left: 0;
+    line-height: 2rem;
+    display: inline-block;
+    padding: 0.2rem 0.7rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.tags {
+    list-style: none;
+    padding: 0;
+}
+
+.tags__item {
+    background: hsl(90, 30%, 70%);
+    text-transform: uppercase;
+    padding: 2px 4px;
+    margin-bottom: 5px;
+    display: inline-block;
+    font-size: 0.7rem;
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+}
+
+.clipped-diamond {
+    width: 33%;
+    -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+.clipped-circle {
+    width: 33%;
+    -webkit-clip-path: circle(30%);
+    clip-path: circle(30%);
+}
+
+.clipped-ellipse {
+    width: 33%;
+    -webkit-clip-path: ellipse(100% 70% at 0% 20%);
+    clip-path: ellipse(100% 70% at 0% 20%);
+}
+/*Modal*/
+.button {
+    background: hsl(90, 30%, 50%);
+    padding: 0.6rem 1.2rem;
+    color: hsl(0, 0%, 100%);
+    border: 0;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+}
+
+.button:hover {
+    background: hsl(90, 30%, 60%);
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background: hsla(0, 0%, 0%, 0.5);
+}
+
+.modal-content {
+    background-color: hsl(0, 0%, 100%);
+    margin: 10% auto;
+    width: 30vw;
+    box-shadow: 0 5px 8px hsla(0, 0%, 0%, 0.2), 0 7px 20px hsla(0, 0%, 0%, 0.17);
+    animation-name: modalopen;
+    animation-duration: 0.5s;
+    border-radius: 1rem;
+}
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    background: hsl(90, 30%, 50%);
+    padding: 1rem 2rem;
+    color: hsl(0, 0%, 100%);
+    border-radius: 0.3rem 0.3rem 0 0;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-footer {
+    padding: 1rem 2rem;
+    background: hsl(90, 30%, 50%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 0 0 0.3rem 0.3rem;
+}
+
+.closeBtn {
+    color: hsl(0, 0%, 100%);
+    float: right;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.closeBtn:focus,
+.closeBtn:hover {
+    color: hsl(0, 0%, 10%);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.shopping-list {
+    list-style-position: inside;
+    margin-top: 20px;
+    max-width: 400px;
+}
+
+.form input {
+    font-size: 1rem;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    margin: 0;
+    flex-grow: 1;
+    z-index: 10;
+    border-right: solid 1px hsl(0,0%,85%);
+}
+
+.button-add {
+    background: hsl(0, 0%, 97%);
+    padding: 0.6rem 1.2rem;
+    color: hsl(0, 0%, 60%);
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+}
+
+.button-add:hover {
+    background: hsl(0, 0%, 94%);
+    cursor: pointer;
+}
+
+.form {
+    display: flex;
+    border-width: 1px;
+    border-style: solid;
+    border-color: hsl(0, 0%, 85%);
+    border-radius: 1px;
+    max-width: 400px;
+}
+
+.button-delete {
+    float: right;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: hsl(0, 0%, 60%);
+    border: none;
+    cursor: pointer;
+}
+
+.todo-item {
+    cursor: pointer;
+}
+
+.done {
+    text-decoration: line-through;
+    color: hsl(0, 0%, 70%);
+}
+
+.gradient-bg {
+    text-align: center;
+    color: hsla(0, 0%, 0%, 0.5);
+    background: linear-gradient(to right, #fff , #fff);
+}
+
+.gradient-bg h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.gradient-bg button {
+    background: hsla(0, 0%, 0%, 0.2);
+}
+
+.gradient-bg button:hover {
+    background: hsla(0, 0%, 0%, 0.3);
+}

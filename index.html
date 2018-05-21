@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="noindex, nofollow">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:300,400,600,700|Nunito:300,400,600,700" rel="stylesheet">
+        <link href='css/icons/fontawesome-all.min.css' rel='stylesheet'/>
+
+        <title>CSS Grid Website</title>
+    </head>
+
+    <body>
+
+        <div class="grid">
+            <header>
+                <nav>
+                    <ul>
+                        <li>Home</li>
+                        <li>Woolf</li>
+                        <li>Reviews</li>
+                        <li>Shapes</li>
+                    </ul>
+                </nav>
+                <h1 class="header__title">G.O.A.T. Header</h1>
+            </header>
+            <section class="content">
+                <article class="section-grid">
+                    <div class="article-bg-image"></div>
+                    <div class="article__item">
+                        <h2 class="list__title">Who's afraid of Virginia Woolf?</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit odit aliquam consectetur esse quod, voluptatum inventore. Cupiditate, excepturi! Distinctio unde modi nesciunt quae, qui eum iure quasi vero, ipsam ullam. Lorem ipsum dolor
+                            sit amet, consectetur adipisicing elit. Consequatur dolorem, rem officiis iure consequuntur et, eligendi libero eveniet inventore nemo aliquam, suscipit tempora neque deserunt ipsum! Tenetur, voluptas. Corrupti, accusamus!</p>
+                    </div>
+                </article>
+            </section>
+            <section class="content-list">
+                <ul class="list">
+                    <li class="list__item">
+                        <div class="list__image">
+                            <img src="assets/images/webproduct_darkbg1.jpg" alt="">
+                        </div>
+                        <h3 class="list__title">The Good, the Bad and the Ugly</h3>
+                        <span class="list__number">Bestseller</span>
+                        <ul class="tags">
+                            <li class="tags__item">Tuco</li>
+                            <li class="tags__item">Blondie</li>
+                            <li class="tags__item">Sentenza</li>
+                        </ul>
+                    </li>
+                    <li class="list__item">
+                        <div class="list__image">
+                            <img src="assets/images/webproduct_darkbg2.jpg" alt="">
+                        </div>
+                        <h3 class="list__title">Citizen Kane</h3>
+                        <span class="list__number">Beginner</span>
+                        <ul class="tags">
+                            <li class="tags__item">Fundamentals</li>
+                            <li class="tags__item">Orson Welles Oscar Winner</li>
+                        </ul>
+                    </li>
+                    <li class="list__item">
+                        <div class="list__image">
+                            <img src="assets/images/webproduct_darkbg3.jpg" alt="">
+                        </div>
+                        <h3 class="list__title">The Matrix</h3>
+                        <span class="list__number">Advanced</span>
+                        <ul class="tags">
+                            <li class="tags__item">The Chosen One</li>
+                            <li class="tags__item">Red Pill</li>
+                            <li class="tags__item">Cyber Kung-Fu Fighting</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <aside class="sidebar grid-item__wrapper">
+                <h2 class="list__title">Sidebar</h2>
+                <button id="modalBtn" class="button">Modal</button>
+            </aside>
+            <div id="simpleModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="closeBtn">&times;</span>
+                        <h2>Modal Header</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quod, molestiae eveniet totam neque molestias voluptas nihil doloremque autem ut quibusdam saepe eaque, cumque dolorem porro labore, fugiat beatae. Aspernatur.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quod, molestiae eveniet totam neque molestias voluptas nihil doloremque autem ut quibusdam saepe eaque, cumque dolorem porro labore, fugiat beatae. Aspernatur.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <h3>Modal Footer</h3>
+                    </div>
+                </div>
+            </div>
+            <section class="content grid-item__wrapper css-line">
+                <h2 class="list__title">Shapes</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur consequatur modi nostrum vitae placeat repudiandae molestias voluptas optio, aliquam natus quasi. Molestiae quae cum nesciunt fugiat, expedita ipsum praesentium error velit ea
+                    beatae minima, sequi nulla ducimus nam architecto cumque dolor doloremque nisi perferendis sint soluta tempore esse. Ipsa, quos.</p>
+                <figure>
+                    <img class="clipped-diamond" src="assets/images/webproduct_darkbg2.jpg" alt="">
+                    <img class="clipped-circle" src="assets/images/webproduct_darkbg2.jpg" alt="">
+                    <img class="clipped-ellipse" src="assets/images/webproduct_darkbg2.jpg" alt="">
+                </figure>
+            </section>
+            <section class="grid-item__wrapper annotation">
+                <h2 class="list__title">Annotation</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium possimus pariatur assumenda, voluptatibus consequatur perferendis fugiat repellendus dolore animi exercitationem!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, quod.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda veritatis, debitis rem pariatur, id fuga!</p>
+            </section>
+            <section class="grid-item__wrapper shopping-list-section">
+                <h2 class="list__title">Shopping List</h2>
+                <div class="form">
+                    <input type="text" name="shopping" placeholder="Enter Todo">
+                    <button type="button" name="shopping" class="button-add">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <ul class="shopping-list"></ul>
+            </section>
+            <section class="grid-item__wrapper gradient-bg">
+                <h2 class="list__title">Gradient Background</h2>
+                <input class="color-left" type="color" name="color-left" value="#F4F726">
+                <input class="color-right" type="color" name="color-right" value="#ff5046">
+                <h3></h3>
+                <button class="button" type="button" name="random">Random Colors</button>
+            </section>
+            <section class="grid-item__wrapper">
+                <h2 class="list__title">Replaced with Secure Links</h2>
+                <a href="http://www.google.com">Unsecure</a>
+                <a href="https://www.google.com">Secure</a>
+            </section>
+            <footer class="footer grid-item__wrapper">
+                <h2>Footer</h2>
+            </footer>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </body>
+
+</html>
