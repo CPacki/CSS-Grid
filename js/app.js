@@ -98,6 +98,11 @@ function toggleDone(event) {
 
 ul.addEventListener('click', toggleDone);
 
+/**
+ *    Gradient Background
+ *    @type {[type]}
+ */
+
 const colorLeft = document.querySelector('.color-left');
 const colorRight = document.querySelector('.color-right');
 const gradientOutput = document.querySelector('.gradient-bg h3');
@@ -138,3 +143,44 @@ $(document).ready(function() {
     });
 
 });
+
+/**
+ *    Drag and Drop
+ */
+
+const fill = document.querySelector('.fill');
+const empties = document.querySelectorAll('.empty');
+
+// Fill Listeners
+fill.addEventListener('dragstart', dragStart);
+fill.addEventListener('dragend', dragEnd);
+
+// Loop Through empties and call drag events
+for (const empty of empties) {
+    empty.addEventListener('dragover', dragOver);
+    empty.addEventListener('dragenter', dragEnter);
+    empty.addEventListener('dragleave', dragLeave);
+    empty.addEventListener('drop', dragDrop);
+}
+
+// Drag Functions
+function dragStart() {
+    setTimeout(() => (this.className = 'invisible'), 0);
+}
+function dragEnd() {
+    this.className = 'fill';
+}
+function dragOver(e) {
+    e.preventDefault();
+}
+function dragEnter(e) {
+    e.preventDefault();
+    this.className += ' hovered';
+}
+function dragLeave() {
+    this.className = 'empty';
+}
+function dragDrop() {
+    this.className = 'empty';
+    this.append(fill);
+}
