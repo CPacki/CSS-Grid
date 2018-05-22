@@ -164,8 +164,9 @@ for (const empty of empties) {
 }
 
 // Drag Functions
-function dragStart() {
+function dragStart(e) {
     setTimeout(() => (this.className = 'invisible'), 0);
+    e.dataTransfer.setData('text/plain', '');
 }
 function dragEnd() {
     this.className = 'fill';
