@@ -91,7 +91,7 @@ nav ul li:hover {
 }
 
 .article-bg-image {
-    background: url("https://www.cp-webseiten.de/CSS-Grid/assets/images/webproduct_darkbg2.jpg") no-repeat center;
+    background: url("http://source.unsplash.com/random/") no-repeat center;
     background-size: cover;
 }
 
@@ -124,6 +124,7 @@ nav ul li:hover {
 
 .content,
 .content-list,
+.dragdrop,
 .gradient-bg,
 .shopping-list-section {
     grid-column: 2 / 4;
@@ -159,6 +160,7 @@ header {
 }
 
 .content,
+.dragdrop,
 .gradient-bg,
 .shopping-list-section,
 .sidebar,
@@ -186,7 +188,7 @@ header {
     display: grid;
     grid-column: 1 / -1;
     height: 100vh;
-    background: url("https://www.cp-webseiten.de/CSS-Grid/assets/images/webproduct_darkbg2.jpg") no-repeat center;
+    background: url("http://source.unsplash.com/random/") no-repeat center;
     background-size: cover;
 }
 
@@ -453,4 +455,33 @@ footer h2 {
 
 .gradient-bg button:hover {
     background: hsla(0, 0%, 0%, 0.3);
+}
+
+.drag__images {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fill {
+    position: relative;
+    background-image: url("http://source.unsplash.com/random/160x160");
+    height: 160px;
+    width: 160px;
+    cursor: pointer;
+}
+
+.empty {
+    display: inline-block;
+    height: 160px;
+    width: 160px;
+    margin: 10px;
+    background-color: hsl(240, 30%, 90%);
+}
+
+.hovered {
+    background: hsl(240, 30%, 70%);
+}
+
+.invisible {
+    display: none;
 }
