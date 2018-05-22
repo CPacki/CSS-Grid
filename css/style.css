@@ -91,7 +91,7 @@ nav ul li:hover {
 }
 
 .article-bg-image {
-    background: url("http://source.unsplash.com/random/") no-repeat center;
+    background: url("https://source.unsplash.com/random/") no-repeat center;
     background-size: cover;
 }
 
@@ -188,7 +188,7 @@ header {
     display: grid;
     grid-column: 1 / -1;
     height: 100vh;
-    background: url("http://source.unsplash.com/random/") no-repeat center;
+    background: url("https://source.unsplash.com/random/") no-repeat center;
     background-size: cover;
 }
 
@@ -464,7 +464,7 @@ footer h2 {
 
 .fill {
     position: relative;
-    background-image: url("http://source.unsplash.com/random/160x160");
+    background-image: url("https://source.unsplash.com/random/160x160");
     height: 160px;
     width: 160px;
     cursor: pointer;
